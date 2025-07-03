@@ -21,12 +21,8 @@ import { Rocket, Loader2 } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
 
 const formSchema = z.object({
-  email: z.string().email({
-    message: "Please enter a valid email address.",
-  }),
-  password: z.string().min(6, {
-    message: "Password must be at least 6 characters.",
-  }),
+  email: z.string().optional(),
+  password: z.string().optional(),
 })
 
 export default function LoginPage() {
